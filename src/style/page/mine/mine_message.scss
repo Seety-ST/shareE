@@ -1,0 +1,71 @@
+@import '../../scss/compass';
+body{
+	.mine-message-page{
+		.item-wrap{
+			.p1th{
+				height: rem(452);
+				@include bgimg("../../images/mine/mine-bg-1080x452.jpg");
+				display: -webkit-box;
+				.avator-item{
+					
+					padding:rem(100) rem(140) rem(0) rem(60);
+					.avator-icon{
+						width: rem(238);
+						height: rem(238);
+						display: inline-block;
+						border-radius: rem(160);
+						border:rem(6) solid #fff;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: center;
+					}
+				}
+				.txt-item{
+					-webkit-box-flex:1;
+					margin:rem(115) rem(130) rem(0) rem(0);
+					.box-1{
+						color:#fff;
+						font-size: rem(48);
+						margin-bottom: rem(30);
+						.txt-2{
+							margin-left: rem(50);
+						}
+					}
+					.box-2{
+						color:#fff;
+						font-size: rem(32);
+						margin-bottom: rem(10);
+						
+					}
+				}
+				
+			}
+			.p2th{
+				margin:rem(84) rem(5);
+				box-shadow: 0 0 20px rgba(0,0,0,.2);
+				background-color: #fff;
+				.list{
+					li{
+						padding:rem(25) rem(50);
+						
+						.item{
+							display: -webkit-box;
+							.box-1{
+								width: rem(300);
+								color:#70727c;
+								font-size: rem(34);
+							}
+							.box-2{
+								-webkit-box-flex:1;
+								font-size: rem(34);
+								text-align: right;
+								color:#70727c;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+	}
+}

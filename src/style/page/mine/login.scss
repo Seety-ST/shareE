@@ -1,0 +1,71 @@
+@import '../../scss/compass';
+body{
+	
+	.login-page{
+		background-color: #4e8cde;
+		padding-bottom:100%;
+		.item-wrap{
+			.p1th{
+				.title{
+					margin-top: rem(140);
+					color:#fff;
+					font-size: rem(45);
+				}
+				.content{
+					height: rem(620);
+					margin-top: rem(125);
+					@include bgimg("../../images/mine/login-bg-1080x540.jpg");
+					background-position: left bottom;
+					.input-item{
+						width: rem(660);
+						padding-left: rem(100);
+						padding-right: rem(35);
+						background-color: #fff;
+						margin:rem(0) auto rem(76);
+						
+						&.user-name-item{
+							@include bgimg("../../images/mine/user-icon-37x37.jpg");
+							background-size: rem(37) rem(37);
+							background-position: rem(35) center;
+							
+						}
+						&.password-item{
+							@include bgimg("../../images/mine/password-icon-37x37.jpg");
+							background-size: rem(37) rem(37);
+							background-position: rem(35) center;
+						}
+						.input-txt{
+							height: rem(94);
+							width: 100%;
+							font-size: rem(36);
+						}
+					}
+					.btn-item{
+						width: rem(798);
+						height: rem(93);
+						line-height: rem(93);
+						margin:rem(190) auto rem(0);
+						background-color: #31b434;
+						.icon{
+							width: rem(52);
+							height: rem(40);
+							display: inline-block;
+							vertical-align: middle;
+							@include bgimg("../../images/mine/login-icon-52x40.jpg");
+						}
+						.txt{
+							font-size: rem(40);
+							display: inline-block;
+							vertical-align: middle;
+							color:#fff;
+							margin-left: rem(20);
+						}
+					}
+
+				}
+				
+			}
+
+		}
+	}
+}

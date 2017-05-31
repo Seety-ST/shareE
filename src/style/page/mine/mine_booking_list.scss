@@ -1,0 +1,48 @@
+@import '../../scss/compass';
+body{
+	.mine-booking-list-page{
+		.item-wrap{
+			.p1th{
+				padding:rem(24);
+				background-color: #dadce1;
+				display: -webkit-box;
+				.box-1{
+					width: rem(435);
+					margin-right: rem(45);
+					padding:rem(0) rem(30);
+					background-color: #fff;
+					border-radius: rem(10);
+					@include bgimg("../../images/mine/calendar-icon-59x59.jpg");
+					background-size: rem(59) rem(59);
+					background-position: rem(420) center ;
+					.input-txt{
+						width: 100%;
+						height: rem(80);
+						font-size: rem(32);
+						color:#8e8e93;
+						
+						
+					}
+				}
+				.box-2{
+					-webkit-box-flex:1;
+					padding:rem(0) rem(30);
+					background-color: #fff;
+					border-radius: rem(10);
+					@include bgimg("../../images/mine/arrow-icon-27x15.jpg");
+					background-size: rem(27) rem(15);
+					background-position: rem(436) center ;
+					.input-txt{
+						width: 100%;
+						height: rem(80);
+						font-size: rem(32);
+						color:#8e8e93;
+						
+						
+					}
+				}
+			}
+			
+		}
+	}
+}

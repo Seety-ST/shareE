@@ -1,0 +1,53 @@
+@import '../../scss/compass';
+body{
+	.booking-detail-page{
+		.item-wrap{
+			.p1th{
+				.img-item{
+					height: rem(674);
+					img{
+						width: 100%;
+					}
+				}
+			}
+			.p2th{
+				margin-top: rem(24);
+				background-color: #fff;
+				box-shadow: 0 0 rem(20) rgba(0,0,0,.2);
+				.txt-item{
+					.list{
+						li{
+							padding:rem(50);
+							.title{
+								color:#404041;
+								font-size: rem(30);
+								font-weight: bold;
+								margin-bottom: rem(60);
+							}
+							dl{
+								display: -webkit-box;
+								display: box;
+								font-size: rem(28);
+								dt{
+									width: rem(307);
+								}
+								dd{
+									-webkit-box-flex:1;
+									color:#000;
+									margin-bottom: rem(12);
+								}
+							}
+						}
+					}
+				}
+			}
+			.p3th{
+				width: 100%;
+				position: fixed;
+				left:0;
+				bottom:0;
+				z-index: 1;
+			}
+		}
+	}
+}

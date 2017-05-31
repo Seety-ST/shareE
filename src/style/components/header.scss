@@ -1,0 +1,40 @@
+@import '../../scss/compass';
+.g-header{
+	width: 100%;
+	height:rem(145);
+	position: fixed;
+	left: 0;
+	top:0;
+	z-index: 1;
+	background-color:#3b91ff;
+	.item-wrap{
+		.back-icon-item{
+			width: rem(108);
+			height: rem(145);
+			position: absolute;
+			left: rem(0);
+			top:rem(0);
+			z-index: 1;
+			text-align: center;
+			.back-icon{
+				width: rem(50);
+				height: rem(50);
+				margin-top: rem(47);
+				display: inline-block;
+				@include bgimg('../images/common/arrow-icon-50x50.png');
+			}
+		}
+		.title-item{
+			width: 60%;
+			height: rem(145);
+			line-height: rem(145);
+			margin: 0 auto;
+			color:#fff;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			font-size: rem(42);
+		}
+	}
+	
+}

@@ -1,0 +1,32 @@
+@import '../../scss/compass';
+body{
+	.mine-use-list-page{
+		.item-wrap{
+			.p1th{
+				padding:rem(24);
+				background-color: #dadce1;
+				display: -webkit-box;
+				.box-1{
+					-webkit-box-flex:1;
+					margin-right: rem(45);
+					padding:rem(0) rem(30);
+					background-color: #fff;
+					border-radius: rem(10);
+					@include bgimg("../../images/mine/calendar-icon-59x59.jpg");
+					background-size: rem(59) rem(59);
+					background-position: rem(900) center ;
+					.input-txt{
+						width: 100%;
+						height: rem(80);
+						font-size: rem(32);
+						color:#8e8e93;
+						
+						
+					}
+				}
+				
+			}
+			
+		}
+	}
+}

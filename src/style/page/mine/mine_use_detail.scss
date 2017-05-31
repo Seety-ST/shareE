@@ -1,0 +1,29 @@
+@import '../../scss/compass';
+body{
+	.mine-use-detail-page{
+		.item-wrap{
+				.p1th{
+					background-color: #fff;
+					box-shadow: 0 0 20px rgba(0,0,0,.2);
+					li{
+						padding:rem(30) rem(45);
+						display: -webkit-box;
+						.box-1{
+							width: rem(307);
+							font-size: rem(36);
+							color:#70727c;
+						}
+						.box-2{
+							-webkit-box-flex:1;
+							font-size: rem(36);
+							color:#70727c;
+							text-align: right;
+						}
+					}
+				}
+		}	
+	}
+
+	
+}
+

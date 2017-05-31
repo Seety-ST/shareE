@@ -1,0 +1,91 @@
+@import '../../scss/compass';
+body{
+	
+	.booking-tips-page{
+		.item-wrap{
+			.p1th{
+				.title{
+					padding:rem(40) rem(36) rem(0);
+					background-color: #fefefe;
+					color:#8e9eb7;
+					font-size:rem(42);
+				}
+				.list{
+					li{
+						padding:rem(34) rem(52);
+						font-size: rem(32);
+						background-color: #fff;
+					
+						.box-1{
+							display: -webkit-box;
+							display: box;
+							.txt-1{
+								-webkit-box-flex:1;
+								margin-top: rem(10);
+
+							}
+							.txt-2{
+								-webkit-box-flex:1;
+								color:#70727c;
+								margin-top: rem(10);
+							}
+							.txt-3{
+								width: rem(82);
+								.icon{
+									width: rem(72);
+									height: rem(72);
+									display: inline-block;
+									&.pass-icon{
+										@include bgimg("../../images/booking/pass-icon-72x72.png");
+									}
+									&.unpass-icon{
+										@include bgimg("../../images/booking/unpass-icon-72x72.png");
+									}
+								}
+							}
+						}
+						&.h-title{
+							background-color: #fefefe;
+							color:#afb9cc;
+							.txt-1{
+								margin-top: rem(0);
+							}
+							.txt-2{
+								color:#afb9cc;
+								margin-top: rem(0);
+							}
+						}
+						.box-2{
+							
+							dl{
+								padding-left: rem(42);
+								display: -webkit-box;
+								display: box;
+								color:#7d8eac;
+								font-size: rem(22);
+								margin-top: rem(10);
+								@include bgimg("../../images/booking/point-icon-10x10.png");
+								background-size: rem(10) rem(10);
+								background-position: left center;
+								dt{
+									-webkit-box-flex:1;
+								}
+								dd{
+									width: rem(82);
+								}
+							}
+						}
+					}
+				}
+			}
+			.p2th{
+				width: 100%;
+				position: absolute;
+				left: 0;
+				bottom:0;
+				z-index: 1;
+			}
+		}
+	}
+}
+

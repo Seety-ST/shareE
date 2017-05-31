@@ -1,0 +1,35 @@
+@import '../../scss/compass';
+body{
+	.change-school-page{
+		.item-wrap{
+				.p1th{
+					
+					box-shadow: 0 0 20px rgba(0,0,0,.2);
+					ul{
+						li{
+						padding:rem(40) rem(50);
+						display: -webkit-box;
+						margin-bottom: rem(10);
+						background-color: #fff;
+						.img-item{
+							width: rem(196);
+							height: rem(200);
+							img{
+								width: 100%;
+							}
+							
+						}
+						.txt-item{
+							-webkit-box-flex:1;
+							padding:rem(60) rem(0) rem(0) rem(60);
+							font-size: rem(46);
+						}
+					}
+					}
+				}
+		}	
+	}
+
+	
+}
+

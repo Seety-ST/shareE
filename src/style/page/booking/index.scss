@@ -1,0 +1,156 @@
+@import '../../scss/compass';
+body{
+	
+	.booking-page{
+		.item-wrap{
+			.p1th{
+				padding:rem(22);
+				.item{
+					padding:rem(22) 0;
+					background-color: #fff;
+					display: -webkit-box;
+					display: box;
+					border-radius: rem(6);
+					.search-form{
+						height: rem(36);
+						-webkit-box-flex:1;
+						box-flex:1;
+						vertical-align: middle;
+						margin-left: rem(20);
+						.input-txt{
+							width: 98%;
+							height: rem(36);
+						}
+					}
+					.search-icon{
+						width: rem(36);
+						height: rem(36);
+						display: inline-block;
+						margin-left: rem(30);
+						vertical-align: middle;
+						@include bgimg('../../images/booking/search-icon-36x36.jpg');
+						font-size: rem(26);
+					}
+				}
+			}
+		}
+	}
+	.mint-popup{
+		width: 100%;
+		height: 100%;
+		background-color: #fafdfd;
+		.apply_device_pop{
+			
+			.p1th{
+				background-color: #3b91ff;
+				.back-icon-item{
+					width: rem(108);
+					height: rem(145);
+					position: absolute;
+					left: rem(0);
+					top:rem(0);
+					z-index: 1;
+					text-align: center;
+					
+					.back-icon{
+						width: rem(50);
+						height: rem(50);
+						margin-top: rem(47);
+						display: inline-block;
+						@include bgimg('../../images/common/arrow-icon-50x50.png');
+					}
+				}
+				.title-item{
+					width: 60%;
+					height: rem(145);
+					line-height: rem(145);
+					margin: 0 auto;
+					color:#fff;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					font-size: rem(42);
+				}
+			}
+			.p2th{
+				.img-item{
+					width: 100%;
+					height: rem(919);
+					img{
+						width: 100%;
+					}
+				}
+				.txt-item{
+					.txt-1{
+						font-size: rem(45);
+						color: #000000;
+						margin-bottom: rem(10);
+					}
+				}
+			}
+			.p3th{
+				width: 100%;
+				position: absolute;
+				left: 0;
+				bottom:0;
+				z-index: 1;
+				display: -webkit-box;
+				display: box;
+				.ui-button{
+					-webkit-box-flex:1;
+				}
+			}
+		}
+		.apply_success_pop{
+			
+			.p1th{
+				background-color: #3b91ff;
+				.back-icon-item{
+					width: rem(108);
+					height: rem(145);
+					position: absolute;
+					left: rem(0);
+					top:rem(0);
+					z-index: 1;
+					text-align: center;
+					
+					.back-icon{
+						width: rem(50);
+						height: rem(50);
+						margin-top: rem(47);
+						display: inline-block;
+						@include bgimg('../../images/common/arrow-icon-50x50.png');
+					}
+				}
+				.title-item{
+					width: 60%;
+					height: rem(145);
+					line-height: rem(145);
+					margin: 0 auto;
+					color:#fff;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					font-size: rem(42);
+				}
+			}
+			.p2th{
+				.img-item{
+					width: 100%;
+					height: rem(919);
+					img{
+						width: 100%;
+					}
+				}
+				.txt-item{
+					.txt-1{
+						font-size: rem(45);
+						color: #000000;
+						margin-bottom: rem(10);
+					}
+				}
+			}
+		}
+	}
+}
+

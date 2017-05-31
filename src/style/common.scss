@@ -1,0 +1,272 @@
+@import '../scss/compass';
+body{
+	max-width: 768px;
+	margin: 0 auto;
+	background-color: #f6f8f9;
+}
+.has_header_pt{
+	padding-top: rem(145);
+}
+.has_footer_pb{
+	padding-bottom: rem(130);
+}
+/* 按钮样式start */
+.ui-button-block{
+	display: block;
+}
+.ui-button-100per{
+	width: 100%;
+}
+/* 高度 */
+.ui-button-size-h70{
+	padding:rem(0) rem(22);
+	height: rem(70);
+	.ui-button-content{
+		font-size: rem(30);
+		vertical-align: bottom;
+		margin-left: rem(10);
+	}
+	
+}
+.ui-button-size-h130{
+	height: rem(130);
+	line-height: rem(130);
+	.ui-button-content{
+		font-size: rem(48);
+	}
+}
+
+/* 背景颜色*/
+.ui-button-bg-ed5{
+	background-color: #ed5757;
+	color:#fff;
+}
+.ui-button-bg-73a{
+	background-color: #73afff;
+	color:#fff;
+}
+.ui-button-bg-e9f{
+	background-color: #e9f4fe;
+	color:#a3bfd4;
+}
+.ui-button-bg-63c{
+	background-color: #63c961;
+	color:#fff;
+}
+.ui-button-bg-3b9{
+	background-color: #3b91ff;
+	color:#fff;
+}
+
+
+/* 圆角值 */
+.ui-button-min-border-radius{
+	border-radius: rem(8);
+}
+
+
+.ui-button{
+	.icon{
+		display: inline-block;
+		vertical-align: bottom;
+		&.revoke-icon{
+			width: rem(38);
+			height: rem(38);
+			@include bgimg('./images/common/back-icon-37x31.png');
+		}
+		&.cancle-icon{
+			width: rem(38);
+			height: rem(38);
+			@include bgimg('./images/common/delete-icon-34x35.png');
+		}
+		&.booking-icon{
+			width: rem(38);
+			height: rem(38);
+			@include bgimg('./images/common/booking-icon-38x38.png');
+		}
+	}
+}
+/* 按钮样式end */
+
+
+/* 公共列表页start */
+.ui-list-mod-1{
+	.list{
+		li{
+			padding:rem(50);
+			background-color: #fff;
+			position: relative;
+			margin-bottom: rem(10);
+			.item{
+				dl{
+					display:-webkit-box;
+					font-size: rem(30);
+					margin-bottom: rem(10);
+					dt{
+						width: rem(160);
+					}
+					dd{
+						-webkit-box-flex:1;
+					}
+				}
+			}
+			.revoke-item{
+				position: absolute;
+				right:rem(30);
+				bottom:rem(30);
+			}
+			.cancle-item{
+				position: absolute;
+				right:rem(30);
+				bottom:rem(30);
+			}
+		}
+	}
+}
+.ui-list-mod-2{
+	.list{
+		li{
+			padding:rem(30);
+			background-color: #fff;
+			position: relative;
+			margin-bottom: rem(16);
+			.item-wrap{
+				display: -webkit-box;
+				display: box;
+				.img-item{
+					width: rem(270);
+					height: rem(264);
+					.img{
+						width: 100%;
+						height: 100%;
+						display: inline-block;
+						background-size: contain;
+						background-repeat: no-repeat;
+						object-fit: contain;
+					}
+				}
+				.txt-item{
+					-webkit-box-flex:1;
+					box-flex:1;
+					margin:rem(0) rem(0) rem(0) rem(54);
+					font-size: rem(30);
+					color:#70727c;
+					.box-1{
+						.txt-1{
+							display: inline-block;
+							color:#000;
+						}
+						.txt-2{
+							display: inline-block;
+							margin-left: rem(74);
+						}
+					}
+					.box-2{
+						
+						.txt-1{
+							display:inline-block;
+							vertical-align: middle;
+							.phone-txt{
+								color:#3b91ff;
+							}
+							
+						}
+						.phone-icon{
+							width: rem(44);
+							height: rem(44);
+							display: inline-block;
+							vertical-align: middle;
+							margin:rem(5) rem(0) rem(0) rem(10);
+							@include bgimg('./images/common/phone-icon-44x44.jpg');
+						}
+						
+					}
+				}
+			}
+			.booking-btn-item{
+				position: absolute;
+				right:rem(30);
+				bottom:rem(20);
+			}
+		}
+	}
+}
+/* 公共列表页end */
+
+/* 一像素start */
+
+.ui-border-t {
+    border-top: 1px solid #e0e0e0;/*no*/
+}
+.ui-border-b {
+    border-bottom: 1px solid #e0e0e0;/*no*/
+}
+.ui-border-tb {
+    border-top: #e0e0e0 1px solid;/*no*/
+    border-bottom: #e0e0e0 1px solid;/*no*/
+    background-image: none
+}
+.ui-border-l {
+    border-left: 1px solid #e0e0e0;/*no*/
+}
+.ui-border-r {
+    border-right: 1px solid #e0e0e0;/*no*/
+}
+.ui-border {
+    border: 1px solid #e0e0e0;/*no*/
+}
+@media screen and (-webkit-min-device-pixel-ratio:2) {
+    .ui-border {
+        position: relative;
+        border: 0
+    }
+    .ui-border-t, .ui-border-b, .ui-border-l, .ui-border-r, .ui-border-tb {
+        border: 0
+    }
+    .ui-border:before {
+        content: "";
+        width: 200%;
+        height: 200%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #e0e0e0;/*no*/
+        -webkit-transform: scale(0.5);
+        -webkit-transform-origin: 0 0;
+        padding: 1px;/*no*/
+        -webkit-box-sizing: border-box
+    }
+    .ui-border-t {
+        background-position: left top;
+        background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0))
+    }
+
+    .ui-border-b {
+        background-position: left bottom;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0))
+    }
+    .ui-border-t, .ui-border-b {
+        background-repeat: repeat-x;
+        -webkit-background-size: 100% 1px;/*no*/
+    }
+    .ui-border-tb {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0)) left top repeat-x, -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0)) left bottom repeat-x
+    }
+    .ui-border-tb {
+        -webkit-background-size: 100% 1px;/*no*/
+    }
+    .ui-border-l {
+        background-position: left top;
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0))
+    }
+    .ui-border-r {
+        background-position: right top;
+        background-image: -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0))
+    }
+    .ui-border-l, .ui-border-r {
+        background-repeat: repeat-y;
+        -webkit-background-size: 1px 100%;/*no*/
+    }
+}
+
+/* 一像素end */

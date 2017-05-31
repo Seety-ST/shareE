@@ -1,0 +1,63 @@
+@import '../../scss/compass';
+.g-footer{
+    width:100%;
+    height: rem(130);
+    line-height: rem(130);
+    background-color: #fafafa;
+    position:fixed;
+    left:0;
+    bottom:0;
+    z-index: 1;
+    .item-wrap{
+        .list{
+            display: -webkit-box;
+            display:box;
+            li{
+                width: rem(360);
+                -webkit-box-flex:1;
+                box-flex:1;
+                text-align: center;
+
+                .icon{
+                    width: rem(42);
+                    height: rem(42);
+                    display: inline-block;
+                    vertical-align: middle;
+                    &.home-icon{
+                        @include bgimg('../images/common/home-icon-42x40.png');
+
+                    }
+                    &.booking-icon{
+                        @include bgimg('../images/common/booking-icon-37x37.png');
+
+                    }
+                    &.mine-icon{
+                        @include bgimg('../images/common/mine-icon-35x35.png');
+
+                    }
+                }
+                .txt{
+                    display: inline-block;
+                    vertical-align: middle;
+                    color:#4a4a4a;
+                    font-size: rem(38);
+                    margin-left: rem(5);
+                }
+                &.cur{
+                    position:relative;
+                    &:after{
+                        content:"";
+                        position:absolute;
+                        width: 100%;
+                        height: rem(10);
+                        display: inline-block;
+                        background-color: #3b91ff;
+                        left: 0;
+                        top:1px;
+                        z-index: 1;
+                    }
+                }
+            }
+        }
+    }
+}
