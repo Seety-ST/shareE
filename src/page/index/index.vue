@@ -32,7 +32,7 @@
 		<!-- 主体内容end -->
 		
 		<!-- 公共底部start -->
-		<!-- <g-footer current="index"></g-footer> -->
+		<g-footer current="index"></g-footer>
 		<!-- 公共底部end -->
 	</div>
 	

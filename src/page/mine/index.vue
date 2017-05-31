@@ -98,5 +98,116 @@ export default {
 }
 </script>
 <style lang="scss">  
-  @import "../../style/page/mine/index";
+  /* @import "../../style/page/mine/index"; */
+  @import '../../scss/compass';
+body{
+	.mine-index-page{
+		.item-wrap{
+			.p1th{
+				height: rem(680);
+				@include bgimg("../../images/mine/mine-bg-1080x680.jpg");
+				.title{
+					font-size: rem(46);
+					color:#fff;
+					padding-top: rem(50);
+				}
+				.avator-item{
+					
+					margin:rem(50) rem(0) rem(30);
+					.avator-icon{
+						width: rem(304);
+						height: rem(304);
+						display: inline-block;
+						border-radius: rem(160);
+						border:rem(10) solid #fff;
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: center;
+					}
+				}
+				.message-txt{
+					width: rem(504);
+					padding:rem(10) rem(0);
+					color:#fff;
+					font-size:rem(32);
+					margin: 0 auto;
+					background:rgba(0,0,0,.3);
+					border:1px solid #5ecaff;
+					border-radius: rem(10);
+				}
+				
+				
+			}
+			.p2th{
+				.title{
+					font-size: rem(34);
+					color:#696969;
+					padding:rem(30) rem(50);
+					background-color: #fff;
+
+
+				}
+				.user-info-item{
+					padding:rem(42) rem(50);
+					background-color: #fff;
+					font-size: rem(40);
+					display: -webkit-box;
+					.box-1{
+						-webkit-box-flex:1;
+					}
+					.box-2{
+						-webkit-box-flex:1;
+						text-align: right;
+					}
+				}
+			}
+			.p3th{
+				background-color: #fff;
+				margin-top:rem(26);
+				.list{
+					box-shadow: 0 0 rem(20) rgba(0,0,0,.1); 
+					li{
+						padding:rem(30) rem(45) rem(30) rem(50);
+						display: -webkit-box;
+						.icon{
+							width: rem(96);
+							height: rem(96);
+							display: inline-block;
+
+							&.booking-icon{
+								@include bgimg("../../images/mine/booking-icon-96x96.png");
+							}
+							&.use-icon{
+								@include bgimg("../../images/mine/use-icon-96x96.png");
+							}
+							&.apply-icon{
+								@include bgimg("../../images/mine/apply-icon-96x96.png");
+							}
+							&.change-icon{
+								@include bgimg("../../images/mine/change-icon-96x96.png");
+							}
+						}
+						.arrow-icon{
+							width: rem(20);
+							height: rem(35);
+							display: inline-block;
+							@include bgimg("../../images/mine/arrow-icon-20x35.png");
+							margin-top: rem(30);
+						}
+						.box-1{
+							-webkit-box-flex:1;
+							font-size: rem(40);
+							.txt{
+								padding:rem(20) rem(40) rem(0) rem(40);
+							}
+						}
+
+					}
+				}
+			}
+			
+		}
+	}
+}
+
 </style>
