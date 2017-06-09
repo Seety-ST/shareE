@@ -9,7 +9,7 @@
 			<div class="item-wrap">
 					<div class="p1th">
 						<h3 class="title">
-							【佰能陈鑫】预约石蜡切片机+摊片机
+							{{lists.equipmentName}}
 						</h3>
 						<ul class="list">
 							<li class="h-title">
@@ -20,58 +20,31 @@
 										
 								</div>			
 							</li>
-							<li class="ui-border-b">
+							
+							<li v-for="(item,index) in lists.checkResult">
 								<div class="box-1">
-									<div class="txt-1"> 1，用户状态   </div>
-									<div class="txt-2"> 审核通过 </div>
+									<div class="txt-1"> {{index}} {{item.item}}   </div>
+									<div class="txt-2"> {{item.value}} </div>
 									<div class="txt-3">
-										<i class="icon pass-icon"></i>
-						 
-									</div>
-										
-								</div>			
-							</li>
-							<li class="ui-border-b">
-								<div class="box-1">
-									<div class="txt-1"> 2，用户状态   </div>
-									<div class="txt-2"> 审核通过 </div>
-									<div class="txt-3">
-										<i class="icon pass-icon"></i>
-						 
-									</div>
-										
-								</div>			
-							</li>
-							<li>
-								<div class="box-1">
-									<div class="txt-1"> 3，公告信息   </div>
-									<div class="txt-2"> 1|2（未阅读） </div>
-									<div class="txt-3">
-										<i class="icon unpass-icon"></i>
+										<i class="icon pass-icon" v-if="item.check"></i>
+										<i class="icon unpass-icon" v-else></i>
 						 
 									</div>
 										
 								</div>
-								<div class="box-2">
-									<dl>
-										<dt>1，AAA bbb</dt>
-										<dd>未读</dd>
+								<div class="box-2" v-if="!item.check">
+									<dl v-for="(items,indexs) in item.sub">
+										<dt>{{indexs}} {{items.item}}</dt>
+										<dd>{{items.value}}</dd>
 									</dl>
-									<dl>
-										<dt>1，AAA bbb</dt>
-										<dd>未读</dd>
-									</dl>
-									<dl>
-										<dt>1，AAA bbb</dt>
-										<dd>未读</dd>
-									</dl>
+									
 								</div>					
 							</li>
 						</ul>
 					</div>	
-					<div class="p2th">
+					<!-- <div class="p2th">
 						<button class="ui-button ui-button-block ui-button-100per ui-button-bg-63c ui-button-size-h130"><span class="ui-button-content" @click="start_booking()">开始预约</span></button>
-					</div>
+					</div> -->
 			</div>
 		</div>	
 		
@@ -107,12 +80,34 @@ export default {
 	},
 
 	created () {
-		
+		var self = this;
+		self.booking_tips();
 	},
 	methods: {
-		start_booking(){
-			
-		}
+		booking_tips(key){
+			var self = this;
+			self.$http({
+			    method: 'POST',
+			    url: this.serverUrl + '/bookingCheck',
+			    headers: {
+			        "X-AUTH-TOKEN": utility.storage.get("token")
+			    },
+			    emulateJSON: true,
+			    params: {
+			        equipmentId: self.$route.params.id
+			    }
+			}).then(function(data) {
+				
+				var res = data.data;
+				console.log(res);
+				if (res.errcode==0) {
+					self.lists=res.data;
+
+				}
+			}, function(error) {
+			    //error
+			})
+		},
 	},
 	components : {
 		'g-header' : header,

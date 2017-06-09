@@ -3,6 +3,9 @@ body{
 	max-width: 768px;
 	margin: 0 auto;
 	background-color: #f6f8f9;
+	.mint-toast{
+		z-index: 9999;
+	}
 }
 .has_header_pt{
 	padding-top: rem(145);
@@ -140,7 +143,7 @@ body{
 						width: 100%;
 						height: 100%;
 						display: inline-block;
-						background-size: contain;
+						background-size: cover;
 						background-repeat: no-repeat;
 						object-fit: contain;
 					}

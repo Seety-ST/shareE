@@ -10,7 +10,8 @@
 					<div class="p1th">
 						<div class="item-1">
 							<ul class="list">
-								<li>
+								
+								<li >
 									<h3 class="title">
 										1.设备概要
 									</h3>
@@ -19,69 +20,130 @@
 											<dt>
 												设备名称 
 											</dt>
-											<dd>12英寸管式炉2   </dd>
+											<dd>{{lists.name}}  </dd>
+										</dl>
+										<dl>
+											<dt>
+												固定资产编号  
+											</dt>
+											<dd>{{lists.label}} </dd>
 										</dl>
 										<dl>
 											<dt>
 												型号  
 											</dt>
-											<dd> </dd>
+											<dd> {{lists.model}}</dd>
 										</dl>
 										<dl>
 											<dt>
 												放置地点  
 											</dt>
-											<dd> 南校区显材楼二楼东超净室</dd>
+											<dd> {{lists.address}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												收费方式  
+											</dt>
+											<dd> {{lists.charges}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												价格  
+											</dt>
+											<dd> {{lists.price}}</dd>
 										</dl>
 									</div>
 								</li>
-								<li>
+								<li >
 									<h3 class="title">
-										1.设备概要
+										2.预约时间
 									</h3>
 									<div class="box-1">
 										<dl>
 											<dt>
-												设备名称 
+												开始时间  
 											</dt>
-											<dd>12英寸管式炉2   </dd>
+											<dd>{{lists.start}}   </dd>
 										</dl>
 										<dl>
 											<dt>
-												型号  
+												结束时间   
 											</dt>
-											<dd> </dd>
+											<dd> {{lists.end}}</dd>
 										</dl>
 										<dl>
 											<dt>
-												放置地点  
+												时长  
 											</dt>
-											<dd> 南校区显材楼二楼东超净室</dd>
+											<dd> {{lists.hours}}</dd>
 										</dl>
+										
 									</div>
 								</li>
-								<li>
+								<li >
 									<h3 class="title">
-										1.设备概要
+										3.预约信息
 									</h3>
 									<div class="box-1">
 										<dl>
 											<dt>
-												设备名称 
+												申请日期
 											</dt>
-											<dd>12英寸管式炉2   </dd>
+											<dd>{{lists.applyTime}}   </dd>
 										</dl>
 										<dl>
 											<dt>
-												型号  
+												付费方式  
 											</dt>
-											<dd> </dd>
+											<dd> {{lists.paymentWay}}</dd>
 										</dl>
 										<dl>
 											<dt>
-												放置地点  
+												课题组名称   
 											</dt>
-											<dd> 南校区显材楼二楼东超净室</dd>
+											<dd> {{lists.subject}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												导师姓名  
+											</dt>
+											<dd> {{lists.teacher}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												使用性质
+											</dt>
+											<dd> {{lists.useNature}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												联系电话 
+											</dt>
+											<dd> {{lists.mobile}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												样品编号 
+											</dt>
+											<dd> {{lists.sampleNo}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												样品数 
+											</dt>
+											<dd> {{lists.sampleCount}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												项目名称 
+											</dt>
+											<dd> {{lists.project}}</dd>
+										</dl>
+										<dl>
+											<dt>
+												不可使用原因 
+											</dt>
+											<dd> {{lists.notAvaliable}}</dd>
 										</dl>
 									</div>
 								</li>
@@ -91,7 +153,7 @@
 						</div>
 						
 					</div>
-					<div class="p2th">
+					<div class="p2th" @click="submit_booking()">
 						<button class="ui-button ui-button-block ui-button-100per ui-button-bg-73a ui-button-size-h130"><span class="ui-button-content">提交预约</span></button>
 					</div>		
 			</div>
@@ -130,9 +192,79 @@ export default {
 	},
 
 	created () {
+		var self = this;
+		self.getBookingInfo();
 	},
 	methods: {
-		
+		getBookingInfo(params){
+			var self = this;
+			var params = params || {} ;
+			self.$http({
+			    method: 'POST',
+			    url: this.serverUrl + '/getBookingInfo',
+			    headers: {
+			        "X-AUTH-TOKEN": utility.storage.get("token")
+			    },
+			    emulateJSON: true,
+			    params : {
+			    	id : self.$route.params.id
+			    }
+			}).then(function(data) {
+				
+				var res = data.data;
+				console.log(data);
+				if (res.errcode==0) {
+					self.lists=res.data;
+
+				}
+			}, function(error) {
+			    //error
+			})
+		},
+		submit_booking(){
+			var self = this;
+			var useNatureNo = "";
+			if (self.useNature=="科研") {
+				useNatureNo = 0;
+			}
+			else{
+				useNatureNo = 1;
+			}
+			var params = {
+			    "equipmentId": self.lists.id,
+			    "subject": self.lists.subject,
+			    "project": self.lists.project,
+			    "sampleNo": self.lists.sampleNo,
+			    "sampleCount": self.lists.sampleCount,
+			    "useNature": useNatureNo,
+			    "content": self.lists.content,
+			    "times": [
+			        {
+			            "start": self.lists.start,
+			            "end": self.lists.end
+			        }
+			    ]
+			}
+			self.$http({
+			    method: 'POST',
+			    url: this.serverUrl + '/booking',
+			    headers: {
+			        "X-AUTH-TOKEN": utility.storage.get("token")
+			    },
+			    emulateJSON: true,
+			    params : params
+			}).then(function(data) {
+				
+				var res = data.data;
+				console.log(data);
+				if (res.errcode==0) {
+					
+
+				}
+			}, function(error) {
+			    //error
+			})
+		}
 	},
 	components : {
 		'g-header' : header,

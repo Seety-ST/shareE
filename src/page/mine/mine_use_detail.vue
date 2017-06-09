@@ -12,57 +12,62 @@
 						<ul class="list">
 							<li class="ui-border-b">
 								<div class="box-1">设备名称</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.name}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">放置地点   </div>
-								<div class="box-2">使用者</div>
+								<div class="box-2">{{lists.address}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">使用者</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.userName}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">导师</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.teacher}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">使用时间</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.time}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">时长（分钟）</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.minute}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">样品数</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.sampleCount}}</div>
 							</li>
 								<li class="ui-border-b">
 								<div class="box-1">登记者  </div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.registrant}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">状态</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2" v-if="lists.status==0">未完成</div>
+								<div class="box-2" v-else="lists.status==1">已完成</div>
+								<div class="box-2" v-else="lists.status==2">已扣费</div>
+								<div class="box-2" v-else="lists.status==3">已结算</div>
+								
 							</li>
 								<li class="ui-border-b">
 								<div class="box-1">电话</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.mobile}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">课题组</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.subject}}</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="box-1">项目名称</div>
-								<div class="box-2">摊片机12英寸</div>
+								<div class="box-2">{{lists.project}}</div>
 							</li>
 						</ul>
 					</div>	
 			</div>
 			
 		</div>	
+		
 		
 		<!-- 主体内容end -->
 	
@@ -90,19 +95,45 @@ export default {
 			lists:[],
 			booking_success_pop : false,
 			booking_success_modal : false,
-
+			
 			
 		}
 	},
 
 	created () {
+		var self = this;
+		self.getUsedConfirm();
 	},
 	methods: {
-		
+		getUsedConfirm(){
+			var self = this;
+			self.$http({
+			    method: 'POST',
+			    url: this.serverUrl + '/getUsedConfirm',
+			    headers: {
+			        "X-AUTH-TOKEN": utility.storage.get("token")
+			    },
+			    emulateJSON: true,
+			    params : {
+			    	id : self.$route.params.id
+			    }
+			}).then(function(data) {
+				
+				var res = data.data;
+				console.log(res);
+				if (res.errcode==0) {
+					self.lists=res.data;
+
+				}
+			}, function(error) {
+			    //error
+			})
+		},
 	},
 	components : {
 		'g-header' : header,
 		'g-footer' : footer,
+		
 	}
 }
 </script>

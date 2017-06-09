@@ -23,6 +23,78 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 var proxyTable = config.dev.proxyTable
 
 var app = express()
+/*模拟数据开始*/
+
+
+// 本地json-server服务器搭建代码
+// 引入数据库文件
+var appData = require('../mock.json')
+
+
+var apiRoutes = express.Router()
+// 使用api的方法来创建连接时候的请求
+apiRoutes.post('/getEquipmentList', function (req, res) {
+  res.json(appData.getEquipmentList);
+});
+apiRoutes.post('/getEquipmentInfo', function (req, res) {
+  res.json(appData.getEquipmentInfo);
+});
+apiRoutes.post('/getShareEList', function (req, res) {
+  res.json(appData.getShareEList);
+});
+apiRoutes.post('/getUnitUser', function (req, res) {
+  res.json(appData.getUnitUser);
+});
+apiRoutes.post('/getUsedConfirmList', function (req, res) {
+  res.json(appData.getUsedConfirmList);
+});
+apiRoutes.post('/getUsedConfirm', function (req, res) {
+  res.json(appData.getUsedConfirm);
+});
+apiRoutes.post('/bookingCheck', function (req, res) {
+  res.json(appData.bookingCheck);
+});
+apiRoutes.post('/getBookingList', function (req, res) {
+  res.json(appData.getBookingList);
+});
+apiRoutes.post('/getBookingInfo', function (req, res) {
+  res.json(appData.getBookingInfo);
+});
+apiRoutes.post('/cancelBooking', function (req, res) {
+  res.json(appData.cancelBooking);
+});
+apiRoutes.post('/getUserEquipmentList', function (req, res) {
+  res.json(appData.getUserEquipmentList);
+});
+apiRoutes.post('/cancelApply', function (req, res) {
+  res.json(appData.cancelApply);
+});
+apiRoutes.post('/getUserInfo', function (req, res) {
+  res.json(appData.getUserInfo);
+});
+apiRoutes.post('/unitLogin', function (req, res) {
+  res.json(appData.unitLogin);
+});
+apiRoutes.post('/apply', function (req, res) {
+  res.json(appData.apply);
+});
+apiRoutes.post('/getBookingTimes', function (req, res) {
+  res.json(appData.getBookingTimes);
+});
+apiRoutes.post('/booking', function (req, res) {
+  res.json(appData.booking);
+});
+apiRoutes.post('/unitSignOut', function (req, res) {
+  res.json(appData.unitSignOut);
+});
+
+// 调用api
+app.use('/api', apiRoutes)
+
+
+
+
+/*模拟数据结束*/
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {

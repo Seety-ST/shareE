@@ -101,6 +101,8 @@ body{
 			}
 			.p3th{
 				background-color: #fff;
+				height: rem(940);
+				overflow-y: scroll;
 				.list{
 					li{
 						padding:rem(36);
@@ -122,6 +124,197 @@ body{
 				z-index: 1;
 			}
 		}
+	}
+	.booking-message-page{
+		.item-wrap{
+			.p2th{
+				padding:rem(2) rem(20) rem(20) rem(20);
+				.list{
+					background-color: #fff;
+					box-shadow: 0 0 20px rgba(0,0,0,.2);
+					padding:rem(120) rem(0) rem(100);
+					li{
+						padding:rem(0) rem(42) rem(0) rem(52);
+						.box-1{
+							margin-top: rem(40);
+							font-size: rem(32);
+							.must-write-icon{
+								width: rem(10);
+								height: rem(10);
+								display: inline-block;
+								vertical-align: middle;
+								@include bgimg("../../images/booking/point-icon-10x10.jpg");
+							}
+							.txt{
+								display: inline-block;
+								vertical-align: middle;
+								margin-left: rem(16);
+							}
+						}
+						.box-2{
+							margin-top: rem(40);
+							.select{
+								padding:rem(20) rem(0) rem(20) 2%;
+								width: 100%;
+								font-size: rem(32);
+								color:#8893ae;
+								border:1px solid #bfcae1;
+								option{
+									padding:rem(20) rem(0);
+								}
+							}
+							.input-txt{
+								width: 98%;
+								border:1px solid #bfcae1;
+								padding:rem(20) rem(0) rem(20) 2%;
+							}
+						}
+					}
+				}
+			}
+			.p4th{
+				width: 100%;
+				
+			}
+			
+		}
+	}
+	.booking_check_pop{
+		overflow-y:scroll; 
+	}
+	.booking-check-page{
+		.item-wrap{
+			.p2th{
+				padding:rem(30) rem(20) rem(20) rem(20);
+				.item-1{
+					background-color: #fff;
+					box-shadow: 0 0 20px rgba(0,0,0,.2);
+					padding:rem(0) rem(0) rem(100);
+					.list{
+						
+						li{
+							.title{
+								padding:rem(30) rem(50) rem(20) rem(50);
+								color:#3b91ff;
+								font-size: rem(34);
+								border-bottom:1px dashed #8a96af;
+							}
+							.box-1{
+								padding:rem(50) rem(70) rem(100) rem(70);
+								dl{
+									display: -webkit-box;
+									dt{
+										width: rem(190);
+										font-size: rem(32);
+										color:#000;
+									}
+									dd{
+										-webkit-box-flex:1;
+										font-size: rem(32);
+									}
+								}
+							}
+						}
+					}
+					.check-item{
+						margin-left: rem(70);
+						.input-check{
+							width: rem(38);
+							height: rem(38);
+							display: inline-block;
+							vertical-align: middle;
+							border:2px solid #ccc;
+							border-radius: rem(20);
+							position: relative;
+							&:before{
+								content:"";
+								width: rem(12);
+								height: rem(12);
+								
+								display: inline-block;
+								position: absolute;
+								left: 50%;
+								top:50%;
+								border-radius: rem(8);
+								margin-left: rem(-6);
+								margin-top: rem(-7);
+							}
+							&.has_checked{
+								background-color: #39d936;
+								border-color: #39d936;
+								&:before{
+									background-color: #fff;
+								}
+							}
+						}
+						.txt{
+							display: inline-block;
+							vertical-align: middle;
+							font-size: rem(30);
+							margin-left: rem(25);
+						}
+					}
+					
+				}
+				
+			}
+			.p3th{
+				width: 100%;
+				position: fixed;
+				left: 0;
+				bottom:0;
+				z-index: 1;
+			}
+			
+		}
+		.mint-popup{
+			background-color: #3b91ff;
+			.apply_success_pop{
+				
+				.p4th{
+					background-color: #3b91ff;
+					.back-icon-item{
+						width: rem(108);
+						height: rem(145);
+						position: absolute;
+						left: rem(0);
+						top:rem(0);
+						z-index: 1;
+						text-align: center;
+						
+						.back-icon{
+							width: rem(50);
+							height: rem(50);
+							margin-top: rem(47);
+							display: inline-block;
+							@include bgimg('../../images/common/arrow-icon-50x50.png');
+						}
+					}
+					.title-item{
+						width: 60%;
+						height: rem(145);
+						line-height: rem(145);
+						margin: 0 auto;
+						color:#fff;
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						font-size: rem(42);
+					}
+				}
+				.p5th{
+
+					.img-item{
+						width: 100%;
+						height: rem(919);
+						img{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+		
 	}
 }
 

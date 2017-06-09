@@ -1,0 +1,722 @@
+{
+    "getEquipmentList":{
+        "errcode": "0",
+        "errmsg": "",
+        "data": {
+            "list": [
+                {
+                    "id": "1",
+                    "img": "http://img.yqgx123.com/image/M00/00/01/eBnqqFkintmAC7r4AAAfSJxHpp0423.jpg",
+                    "name": "12英寸管式炉",
+                    "label": "2017051102556",
+                    "admin": "王小波",
+                    "mobile": "13000088000",
+                    "address": "中山大学B",
+                    "useType": "送样预约"
+                },
+                {
+                    "id": "2",
+                    "img": "http://img.yqgx123.com/image/M00/00/01/eBnqqFkintmAC7r4AAAfSJxHpp0423.jpg",
+                    "name": "单片机",
+                    "label": "2017051102557",
+                    "admin": "陈晓明",
+                    "mobile": "13000088002",
+                    "address": "中山大学A",
+                    "useType": "送样预约"
+                },
+                {
+                    "id": "3",
+                    "img": "http://img.yqgx123.com/image/M00/00/01/eBnqqFkintmAC7r4AAAfSJxHpp0423.jpg",
+                    "name": "12摊片机",
+                    "label": "2017051102555",
+                    "admin": "郑凯",
+                    "mobile": "13000088003",
+                    "address": "中山大学",
+                    "useType": "送样预约"
+                }
+            ],
+            "page": {
+                "currentPage": 1,
+                "orderBy": "id ASC",
+                "pageCount": 2,
+                "pageSize": 10,
+                "rowCount": 3,
+                "totalCount": 3,
+                "offset": 0
+            }
+        }
+    },
+    "getEquipmentInfo" : {
+        "errcode": "0",
+        "errmsg": "",
+        "data": {
+            "id": "1",
+            "img": "http://img.yqgx123.com/image/M00/00/01/eBnqqFkintmAC7r4AAAfSJxHpp0423.jpg",
+            "name": "12英寸管式炉",
+            "label": "2017051102556",
+            "model ": "XH00-e",
+            "productionArea": "德国",
+            "productionDate": "2015-05-01",
+            "buyDate": "2017-05-01 ",
+            "unit": "南方医科大学",
+            "address": "南方医科大学教学楼A301",
+            "class": "A类",
+            "admin": "王小波",
+            "mobile": "13000088000",
+            "userType": "送样预约"
+        }
+    },
+    "getShareEList" : {
+        "errcode": 0,
+        "errmsg": "success",
+        "data": {
+            "list": [
+                {
+                    "id": "1",
+                    "img": "http://img.yqgx123.com/image/M00/00/01/eBnqqFkxDxmAOLdLAACZW5pjBUM454.png",
+                    "name": "华南师范大学律师学院"
+                },
+                {
+                    "id": "2",
+                    "img": "http://img.yqgx123.com/image/M00/00/01/eBnqqFkxD-KAXxuQAACO-AYVHWI531.png",
+                    "name": "中山大学"
+                },
+                {
+                    "id": "3",
+                    "img": "http://img.yqgx123.com/image/M00/00/01/eBnqqFkxEA-AXW94AACVk42OQ2E647.png",
+                    "name": "南方医科大学"
+                }
+            ],
+            "page": {
+                "currentPage": 1,
+                "orderBy": "id DESC",
+                "pageCount": 2,
+                "pageSize": 10,
+                "rowCount": 3,
+                "totalCount": 10,
+                "offset": 0
+            }
+        }
+    },
+
+    "getUnitUser" : {
+        "errcode":0,
+        "errmsg":"success",
+        "data":{
+            "id":"1",
+            "img":"http://wx.qlogo.cn/mmopen/ZXMY8ib7zF9RvE1I6w6nUlq0foaxzXXIMiatZJron19rb2ISKLCoGUDBakKY5ibFx3cvb2sTJ5Qiay7jbM4xRArCeV3ibpP6JGeIK/0",
+            "name":"孙建强",
+            "sex":"男",
+            "email":"bynon@huayueco.com",
+            "mobile":"13826433550",
+            "address":"广州市番禺区兴南大道583号",
+            "certificateType":"身份证",
+            "certificateNo":"440508199012301021",
+            "unit":"广州佰能信息科技有限公司",
+            "grade":"研二",
+            "teacher":"李导师",
+            "profession":"生物",
+            "direction":"试管婴儿",
+            "cardNo":"201005131103"
+        }
+    },
+    "getUsedConfirmList" : {
+        "errcode": "0",
+        "errmsg": "",
+        "data": {
+            "list": [
+                {
+                    "id": "1",
+                    "name": "12英寸管式炉",
+                    "address": "光电材料合成与制备研究院",
+                    "time": "2017-05-05 12: 00: 00~2017-05-05 13: 30: 00",
+                    "status": "0"
+                },
+                {
+                    "id": "2",
+                    "name": "石蜡切片机",
+                    "address": "华南师范大学",
+                    "time": "2017-05-05 15: 00: 00~2017-05-05 23: 59: 59",
+                    "status": "1"
+                },
+                {
+                    "id": "3",
+                    "name": "石蜡切片机",
+                    "address": "华南师范大学",
+                    "time": "2017-05-06 00: 00: 00~2017-05-06 17: 30: 00",
+                    "status": "1"
+                },
+                {
+                    "id": "3",
+                    "name": "石蜡切片机",
+                    "address": "华南师范大学",
+                    "time": "2017-05-06 00: 00: 00~2017-05-06 17: 30: 00",
+                    "status": "1"
+                }
+            ],
+            "page": {
+                "currentPage": 1,
+                "orderBy": "start DESC",
+                "pageCount": 2,
+                "pageSize": 10,
+                "rowCount": 3,
+                "totalCount": 31,
+                "offset": 0
+            }
+        }
+    },
+
+    "getUsedConfirm" : {
+        "errcode": 0,
+        "errmsg": "success",
+        "data": {
+            "id": "1",
+            "name": "12英寸管式炉",
+            "address": "广州市番禺区兴南大道436号",
+            "userName": "佰能信息科技有限公司",
+            "teacher": "李导师",
+            "time": "2016-05-05 12:00:00 ~ 2016-05-07 08:00:00",
+            "minute": 2760,
+            "sampleCount": 5,
+            "registrant": "王晓明",
+            "status": 0,
+            "mobile": "13826455889",
+            "subject": "李导师课题组",
+            "project": "李导师项目组"
+        }
+    },
+    "bookingCheck" : {
+        "errcode": "0",
+        "errmsg": "",
+        "data": {   
+            "equipmentName": "石蜡切片机",
+            "op": "1",
+            "checkResult": {
+                "1": {
+                    "item": "用户状态",
+                    "value": "审核通过",
+                    "check": true
+                },
+                "2": {
+                    "item": "设置黑名单",
+                    "check": true
+                },
+                "3": {
+                    "item": "公告信息",
+                    "value": "1|2（未阅读）",
+                    "check": false,
+                    "sub": {
+                        "1": {
+                            "item": "石蜡切片机使用说明及注意事项",
+                            "value": "未读"
+                        },
+                        "2": {
+                            "item": "预约前请联系管理员规则",
+                            "value": "已读"
+                        }
+                    }
+                },
+                "4": {
+                    "item": "不良行为",
+                    "check": true
+                },
+                "5": {
+                    "item": "培训申请",
+                    "check": true
+                },
+                "6": {
+                    "item": "使用设备权限",
+                    "value": "有权限",
+                    "check": true
+                },
+                "7": {
+                    "item": "使用反馈",
+                    "check": true
+                },
+                "8": {
+                    "item": "仪器设备在线考试",
+                    "check": true
+                },
+                "9": {
+                    "item": "所属机构在线考试",
+                    "check": true
+                }
+            }
+        }
+    },
+    "getBookingList":{
+        "errcode": "0",
+        "errmsg": "",
+        "data": {
+            "list": [
+                {
+                    "id": "1",
+                    "name": "12英寸管式炉",
+                    "address": "12光电材料合成与制备研究院",
+                    "time": "2017-05-05 12: 00 ~2017-05-05 13: 30",
+                    "status": "0"
+                },
+                {
+                    "id": "2",
+                    "name": "石蜡切片机",
+                    "address": "华南师范大学",
+                    "time": "2017-05-05 15: 00 ~2017-05-05 23: 59",
+                    "status": "1"
+                },
+                {
+                    "id": "3",
+                    "name": "石蜡切片机",
+                    "address": "华南师范大学",
+                    "time": "2017-05-06 00: 00 ~ 2017-05-06 17: 30",
+                    "status": "1"
+                },
+                {
+                    "id": "3",
+                    "name": "石蜡切片机",
+                    "address": "华南师范大学",
+                    "time": "2017-05-06 00: 00 ~ 2017-05-06 17: 30",
+                    "status": "1"
+                },
+                {
+                    "id": "3",
+                    "name": "石蜡切片机",
+                    "address": "华南师范大学",
+                    "time": "2017-05-06 00: 00 ~ 2017-05-06 17: 30",
+                    "status": "1"
+                }
+            ],
+            "page": {
+                "currentPage": 1,
+                "orderBy": "start DESC",
+                "pageCount": 2,
+                "pageSize": 10,
+                "rowCount": 3,
+                "totalCount": 30,
+                "offset": 0
+            }
+        }
+    },
+
+    "getBookingInfo":{
+        "errcode": 0,
+        "errmsg": "success",
+        "data": {
+            "id": "1",
+            "name": "12英寸管式炉",
+            "label": "201711202415",
+            "model": "XHD89-02",
+            "address": "12光电材料合成与制备研究院",
+            "price": "￥1,250,000",
+            "start": "2017-06-05 08:00:00",
+            "end": "2017-06-05 12:00:00",
+            "hours": 2,
+            "applyTime": "2017-06-04 12:00:00",
+            "paymentWay": "按使用时间",
+            "subject": "李导师课题组",
+            "teacher": "李导师",
+            "mobile": "13000043210",
+            "sampleNo": "XDE005",
+            "sampleCount": 6,
+            "project": "李导师项目组",
+            "useNature": "教学",
+            "notAvaliable": "不可使用原因",
+            "status": 0
+        }
+    },
+    "cancelBooking" : {
+        "errcode": "0",
+        "errmsg": ""
+    },
+    "getUserEquipmentList":{
+        "errcode": "0",
+        "errmsg": "",
+        "data": {
+            "list": [
+                {
+                    "id": "1",
+                    "name": "12英寸管式炉",
+                    "time": "2017-05-05 15:00",
+                    "status": "0"
+                },
+                {
+                    "id": "2",
+                    "name": "石蜡切片机",
+                    "time": "2017-05-05 8:00",
+                    "status": "1"
+                },
+                {
+                    "id": "3",
+                    "name": "单片机",
+                    "time": "2017-05-06 23:00",
+                    "status": "2"
+                }
+            ],
+            "page": {
+                "currentPage": 1,
+                "orderBy": "start DESC",
+                "pageCount": 2,
+                "pageSize": 10,
+                "rowCount": 3,
+                "totalCount": 3,
+                "offset": 0
+            }
+        }
+    },
+    "cancelApply" : {
+        "errcode": "0",
+        "errmsg": ""
+    },
+
+    "getUserInfo":{
+       "errcode":0,
+       "errmsg":"success",
+       "data":{
+           "id":"1",
+           "img":"http://wx.qlogo.cn/mmopen/ZXMY8ib7zF9RvE1I6w6nUlq0foaxzXXIMiatZJron19rb2ISKLCoGUDBakKY5ibFx3cvb2sTJ5Qiay7jbM4xRArCeV3ibpP6JGeIK/0",
+           "weixin":"棒棒哥",
+           "unit":"广州佰能信息科技有限公司",
+           "account":"bynon@huayueco.com",
+           "isBind":true
+       }
+    },
+    "unitLogin" : {
+        "errcode": "0",
+        "errmsg": "",
+        "token" : "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzg3MDIxNTk4LCJ1c2VybmFtZSI6ImJ5bm9uVGVzdEAxNjMuY29tIiwicm9sZSI6IuW3sumAieaLqXNoYXJlRei0puaItyJ9.LwOmyPEX8Ks5Lhwn7Cd7g6p69JhERNBsyOBcy9xBB_LWcAXS5d2hX_yqpx9PinonoNN04420PL7D_mFBFkkf2g"
+    },
+     "apply" : {
+        "errcode": "0",
+        "errmsg": ""
+    },
+    "getBookingTimes":{
+        "errcode": "0",
+        "errmsg": "",
+        "data": {
+            "bookable": true,
+            "reason": "不可预约理由",
+            "start": "2017-06-21",
+            "end": "2017-06-27",
+            "start_week": "星期一",
+            "end_week": "星期日",
+            "timeunit": 120,
+            "starthour": 8,
+            "endhour": 18,
+            "subject": [
+                "课题组A",
+                "课题组B"
+            ],
+            "project": [
+                "项目组名称A",
+                "项目组名称B"
+            ],
+            "useNature": [
+                "科研",
+                "教育"
+            ],
+            "bookabledates": [
+                {
+                    "bookable": true,
+                    "date": "2017-06-21",
+                    "week": "星期一",
+                    "booabletimes": [
+                        {
+                            "start": 1,
+                            "end": 10,
+                            "reason": "已经被预约，预约人【谭晶晶-13606400555】",
+                            "ischeked": false
+                        },
+                        {
+                            "start": 1000,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                },
+                {
+                    "bookable": true,
+                    "date": "2017-06-22",
+                    "week": "星期二",
+                    "booabletimes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 10,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                },
+                {
+                    "bookable": true,
+                    "date": "2017-06-22",
+                    "week": "星期二",
+                    "booabletimes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 10,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                },
+                {
+                    "bookable": true,
+                    "date": "2017-06-22",
+                    "week": "星期二",
+                    "booabletimes": [
+                        {
+                            "start": 2,
+                            "end": 10,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 10,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                },
+                {
+                    "bookable": true,
+                    "date": "2017-06-23",
+                    "week": "星期三",
+                    "booabletimes": [
+                        {
+                            "start": 3,
+                            "end": 10,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 10,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                },
+                {
+                    "bookable": true,
+                    "date": "2017-06-24",
+                    "week": "星期四",
+                    "booabletimes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 10,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                },
+                {
+                    "bookable": true,
+                    "date": "2017-06-25",
+                    "week": "星期五",
+                    "booabletimes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 10,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                },
+                {
+                    "bookable": true,
+                    "date": "2017-06-26",
+                    "week": "星期六",
+                    "booabletimes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 10,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                },
+                {
+                    "bookable": true,
+                    "date": "2017-06-27",
+                    "week": "星期日",
+                    "booabletimes": [
+                        {
+                            "start": 8,
+                            "end": 10,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 10,
+                            "end": 12,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 12,
+                            "end": 14,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 14,
+                            "end": 16,
+                            "ischeked": true
+                        },
+                        {
+                            "start": 16,
+                            "end": 18,
+                            "ischeked": true
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "booking":{
+        "errcode": "0",
+        "errmsg": "success"
+    },
+
+    "unitSignOut":{
+        "errcode": 0,
+        "errmsg": "success",
+        "data": {
+            "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzg3MDIxNTk4LCJ1c2VybmFtZSI6ImJ5bm9uVGVzdEAxNjMuY29tIiwicm9sZSI6IuacqumAieaLqXNoYXJlReW5s-WPsCJ9.jD_IL72BUOiWIK32a9TvpqdV8AduAzimE5yzBbajPxWVMvARe6Lc2ymrVdfjmMKUp8rIdZ1DKLSgYumHIe3q-A"
+        }
+    }
+
+}

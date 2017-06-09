@@ -9,20 +9,20 @@
 			<div class="item-wrap">
 					<div class="p1th">
 						<div class="avator-item">
-							<i class="avator-icon">
+							<i class="avator-icon" :style="{backgroundImage: 'url(' + lists.img + ')'}">
 
 							</i>
 						</div>
 						<div class="txt-item">
 							<div class="box-1">
-								<span class="txt-1">小五   </span>
-								<span class="txt-2">女</span>
+								<span class="txt-1">{{lists.name}}   </span>
+								<span class="txt-2">{{lists.sex}}</span>
 							</div>
 							<div class="box-2">
-								<span class="txt-1">邮箱：1524598@qq.com</span>
+								<span class="txt-1">邮箱：{{lists.email}}</span>
 							</div>
 							<div class="box-2">
-								<span class="txt-1">手机,：1384578458745</span>
+								<span class="txt-1">手机,：{{lists.mobile}}</span>
 							</div>
 						</div>
 					</div>	
@@ -32,55 +32,55 @@
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">联系地址</div>
-									<div class="box-2">广州市番禺区兴南大道436号</div>
+									<div class="box-2">{{lists.address}}</div>
 								</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">证件类型</div>
-									<div class="box-2">身份证</div>
+									<div class="box-2">{{lists.certificateType}}</div>
 								</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">证件号码</div>
-									<div class="box-2">441478523698745632</div>
+									<div class="box-2">{{lists.certificateNo}}</div>
 								</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">单位机构</div>
-									<div class="box-2">佰能信息科技有限公司</div>
+									<div class="box-2">{{lists.unit}}</div>
 								</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">年级</div>
-									<div class="box-2">广州市番禺区兴南大道436号</div>
+									<div class="box-2">{{lists.grade}}</div>
 								</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">导师</div>
-									<div class="box-2"></div>
+									<div class="box-2">{{lists.teacher}}</div>
 								</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">专业  </div>
-									<div class="box-2"></div>
+									<div class="box-2">{{lists.profession}}</div>
 								</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">研究方向</div>
-									<div class="box-2"></div>
+									<div class="box-2">{{lists.direction}}</div>
 								</div>
 							</li>
 							<li class="ui-border-b">
 								<div class="item">
 									<div class="box-1">卡号   </div>
-									<div class="box-2">426656666666</div>
+									<div class="box-2">{{lists.cardNo}}</div>
 								</div>
 							</li>
 						</ul>
@@ -115,9 +115,31 @@ export default {
 	},
 
 	created () {
-		
+		var self = this;
+		self.getUnitUser();
 	},
 	methods: {
+		getUnitUser(){
+			var self = this;
+			self.$http({
+			    method: 'POST',
+			    url: this.serverUrl + '/getUnitUser',
+			    headers: {
+			        "X-AUTH-TOKEN": utility.storage.get("token")
+			    },
+			    emulateJSON: true,
+			}).then(function(data) {
+				
+				var res = data.data;
+				console.log(res);
+				if (res.errcode==0) {
+					self.lists=res.data;
+
+				}
+			}, function(error) {
+			    //error
+			})
+		},
 	},
 	components : {
 		'g-header' : header,

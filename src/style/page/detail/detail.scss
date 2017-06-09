@@ -4,9 +4,12 @@ body{
 		.item-wrap{
 			.p1th{
 				.img-item{
+					width: 100%;
 					height: rem(674);
+					overflow: hidden;
 					img{
 						width: 100%;
+						object-fit: contain;
 					}
 				}
 			}
